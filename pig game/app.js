@@ -11,21 +11,20 @@ GAME RULES:
 var score,roundscore,activeplayer,gameplaying,name1,name2;
 first();
 
-//dice disapreaing
+
 document.querySelector(".dice").style.display = "none";
 
 document.querySelector(".btn-roll").addEventListener("click",function() {
  
     if (gameplaying) {
-        //random number
+        ]
     var dice =  Math.floor(Math.random()*6)+1;
 
-    //display result
+    
     var diceDom = document.querySelector(".dice");
     diceDom.style.display = "block"
     diceDom.src = "dice-"+ dice +".png";
-    
-    //score update until we get 1
+
     if (dice !== 1) {
         roundscore += dice;
         document.querySelector("#current-"+ activeplayer).textContent = roundscore;
@@ -99,12 +98,4 @@ document.querySelector(".player-0-panel").classList.remove("active");
 document.querySelector(".player-1-panel").classList.remove("active");
 document.querySelector(".player-0-panel").classList.add("active");    
 };
-//for random numbers
 
-
-//for selecting one point
-//document.querySelector("#current-"+activeplayer).textContent = dice;
-
-/* to save the score
-var x = document.querySelector('#score-0').textContent;
-console.log(x);*/
